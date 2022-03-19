@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => (
   <div className="px-8">
@@ -11,58 +10,74 @@ const Home: NextPage = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <main className={styles.main}>
-      <h1 className={styles.title}>
+    <main className="flex flex-col flex-1 justify-center items-center py-16 min-h-screen">
+      <h1 className="text-[4rem] leading-[1.15] text-center">
         Welcome to
-        <a href="https://nextjs.org">Next.js!</a>
+        {' '}
+        <a href="https://nextjs.org" className="text-[#0070f3] hover:underline focus:underline active:underline">
+          Next.js!
+        </a>
       </h1>
 
-      <p className={styles.description}>
+      <p className="my-16 text-2xl leading-normal text-center">
         Get started by editing
         {' '}
-        <code className={styles.code}>pages/index.tsx</code>
+        <code className="p-3 font-code text-[1.1rem] bg-zinc-50 rounded-[5px]">pages/index.tsx</code>
       </p>
 
-      <div className={styles.grid}>
-        <a href="https://nextjs.org/docs" className={styles.card}>
-          <h2>Documentation &rarr;</h2>
-          <p>Find in-depth information about Next.js features and API.</p>
+      <div className="flex flex-col flex-wrap justify-center items-center w-full max-w-[800px] sm:flex-row sm:w-auto">
+        <a
+          href="https://nextjs.org/docs"
+          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
+        >
+          <h2 className="mb-4 text-2xl">Documentation &rarr;</h2>
+          <p className="text-xl leading-normal">
+            Find in-depth information about Next.js features and API.
+          </p>
         </a>
 
-        <a href="https://nextjs.org/learn" className={styles.card}>
-          <h2>Learn &rarr;</h2>
-          <p>Learn about Next.js in an interactive course with quizzes!</p>
+        <a
+          href="https://nextjs.org/learn"
+          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
+        >
+          <h2 className="mb-4 text-2xl">Learn &rarr;</h2>
+          <p className="text-xl leading-normal">
+            Learn about Next.js in an interactive course with quizzes!
+          </p>
         </a>
 
         <a
           href="https://github.com/vercel/next.js/tree/canary/examples"
-          className={styles.card}
+          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
         >
-          <h2>Examples &rarr;</h2>
-          <p>Discover and deploy boilerplate example Next.js projects.</p>
+          <h2 className="mb-4 text-2xl">Examples &rarr;</h2>
+          <p className="text-xl leading-normal">
+            Discover and deploy boilerplate example Next.js projects.
+          </p>
         </a>
 
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className={styles.card}
+          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
         >
-          <h2>Deploy &rarr;</h2>
-          <p>
+          <h2 className="mb-4 text-2xl">Deploy &rarr;</h2>
+          <p className="text-xl leading-normal">
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
         </a>
       </div>
     </main>
 
-    <footer className={styles.footer}>
+    <footer className="flex flex-1 justify-center items-center py-16 border-t border-t-[#eaeaea] border-solid">
       <a
         href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        className="flex grow justify-center items-center"
         target="_blank"
         rel="noopener noreferrer"
       >
         Powered by
         {' '}
-        <span className={styles.logo}>
+        <span className="ml-2 h-4">
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
         </span>
       </a>
