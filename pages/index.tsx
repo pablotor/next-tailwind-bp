@@ -2,6 +2,14 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 
+const styles = {
+  card: {
+    container: 'p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors',
+    title: 'mb-4 text-2xl',
+    text: 'text-xl leading-normal',
+  },
+};
+
 const Home: NextPage = () => (
   <div className="px-8">
     <Head>
@@ -26,42 +34,36 @@ const Home: NextPage = () => (
       </p>
 
       <div className="flex flex-col flex-wrap justify-center items-center w-full max-w-[800px] sm:flex-row sm:w-auto">
-        <a
-          href="https://nextjs.org/docs"
-          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
-        >
-          <h2 className="mb-4 text-2xl">Documentation &rarr;</h2>
-          <p className="text-xl leading-normal">
+        <a href="https://nextjs.org/docs" className={styles.card.container}>
+          <h2 className={styles.card.title}>Documentation &rarr;</h2>
+          <p className={styles.card.text}>
             Find in-depth information about Next.js features and API.
           </p>
         </a>
 
-        <a
-          href="https://nextjs.org/learn"
-          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
-        >
-          <h2 className="mb-4 text-2xl">Learn &rarr;</h2>
-          <p className="text-xl leading-normal">
+        <a href="https://nextjs.org/learn" className={styles.card.container}>
+          <h2 className={styles.card.title}>Learn &rarr;</h2>
+          <p className={styles.card.text}>
             Learn about Next.js in an interactive course with quizzes!
           </p>
         </a>
 
         <a
           href="https://github.com/vercel/next.js/tree/canary/examples"
-          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
+          className={styles.card.container}
         >
-          <h2 className="mb-4 text-2xl">Examples &rarr;</h2>
-          <p className="text-xl leading-normal">
+          <h2 className={styles.card.title}>Examples &rarr;</h2>
+          <p className={styles.card.text}>
             Discover and deploy boilerplate example Next.js projects.
           </p>
         </a>
 
         <a
           href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          className="p-6 m-4 max-w-[300px] text-left text-inherit hover:text-[#0070f3] focus:text-[#0070f3] active:text-[#0070f3] rounded-[10px] border border-[#eaeaea] hover:border-[#0070f3] focus:border-[#0070f3] active:border-[#0070f3] border-solid transition-colors"
+          className={styles.card.container}
         >
-          <h2 className="mb-4 text-2xl">Deploy &rarr;</h2>
-          <p className="text-xl leading-normal">
+          <h2 className={styles.card.title}>Deploy &rarr;</h2>
+          <p className={styles.card.text}>
             Instantly deploy your Next.js site to a public URL with Vercel.
           </p>
         </a>
